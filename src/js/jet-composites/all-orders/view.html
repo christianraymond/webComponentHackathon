@@ -12,41 +12,38 @@
 </head>
 
 <body>
-  <h1>ORDER ACKNOWLEGMENT MANAGEMENT</h1>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+  <img src="imgs/bicycle-HD.jpg" alt="" lenght="15%" height="40%" width="30%"/>
   <form>
     <div class="form-row">
       <div class="form-group col-md-2">
-        <label for="inputclient">Client</label>
-        <input type="text" class="form-control" data-bind="value:client" id="client" placeholder="Client..">
-      </div>
+        <label for="inputclient">Customer</label>
+        <input type="text" class="form-control" data-bind="value:client" id="client" placeholder="Client.." required="">
+      </div><br>
 
       <div class="form-group col-md-2">
-        <label for="inputtype">Type</label>
-        <input type="text" class="form-control" data-bind="value:type" id="type" placeholder="Type..">
-      </div>
+        <label for="inputtype">Bicycle Type</label>
+        <input type="text" class="form-control" data-bind="value:type" id="type" placeholder="Type.." required="">
+      </div><br>
 
       <div class="form-group col-md-2">
         <label for="inputlocation">Location</label>
-        <input type="text" class="form-control" data-bind="value:location" id="location" placeholder="Location..">
+        <input type="text" class="form-control" data-bind="value:location" id="location" placeholder="Location.." required="">
       </div>
 
-      <div class="form-group col-md-2">
+      <div class="form-group col-md-2"><br>
         <label for="inputamount">Amount</label>
-        <input type="text" class="form-control" data-bind="value:amount" id="amount" placeholder="Amount..">
+        <input type="text" class="form-control" data-bind="value:amount" id="amount" placeholder="Amount.." required="">
       </div>
     </div>
     <button type="submit" data-bind="click: addNewOrder" class="btn btn-primary">Submit</button>
-  </form>
+  </form><br>
 
-  <!-- <input type="text" data-bind="value: client" /> -->
-
-  <h2>New orders</h2>
+  <h2><b>New orders</b></h2>
   <div class="row" data-bind="foreach: newOrders">
     <div class="col-sm-2">
       <div class="card bg-danger">
@@ -59,10 +56,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div><br>
 
-  <h2>Orders in process</h2>
-
+  <h2><b>Orders in process</b></h2>
   <div class="row" data-bind="foreach: ordersInProcess">
     <div class="col-sm-2">
       <div class="card bg-warning">
@@ -77,7 +73,8 @@
     </div>
   </div>
   <br>
-  <h2>Completed orders</h2>
+
+  <h2><b>Completed orders</b></h2>
   <div class="row" data-bind="foreach: completedOrders">
     <div class="col-sm-2">
       <div class="card bg-success">

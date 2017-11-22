@@ -18,22 +18,18 @@ define(
         self.amount = ko.observable();
 
         context.props.then(function (propertyMap) {
-            //Store a reference to the properties for any later use
             self.properties = propertyMap;
-
-            //Parse your component properties here
-
         });
 
         self.newOrders = ko.observableArray([
-          // {client : "Sipha", type : "bicycle", location : "USA", amount: 39},
-          // {client : "Mbulelo", type : "bicycle", location : "USA", amount: 39},
-          // {client : "Chris", type : "bicycle", location : "USA", amount: 39},
+
         ]);
         self.addNewOrder = function(){
-
           self.newOrders.push({id : Math.random().toFixed(2)*100, client : self.client(), type : self.type(), location: self.location(), amount: self.amount()})
         }
+
+          
+
         self.ordersInProcess = ko.observableArray([]);
 
         self.completedOrders = ko.observableArray([]);
