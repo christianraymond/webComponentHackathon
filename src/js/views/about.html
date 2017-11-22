@@ -1,4 +1,4 @@
-<!-- <!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -17,8 +17,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<all-orders></all-orders>
+  <all-orders></all-orders>
   <div class="row">
+
+    <!-- <div class="row">
     <div class="col-md-6">
       <form>
         <div class="form-row">
@@ -66,58 +68,92 @@
     </div>
     <div class="col-md-6">
 
-    </div>
 
-  </div>
+  </div> -->
 
-  <h1>ORDER ACKNOWLEGMENT MANAGEMENT</h1>
-  <h2>New orders</h2>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Enter bicycle type</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter type of bicyle's">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+        </div>
+      </div>
 
-  <div class="row" data-bind="foreach: newOrders">
-    <div class="col-sm-2">
-      <div class="card bg-danger">
-        <div class="card-body">
-          <h4 class="card-title" data-bind="text: header"></h4>
-          <p class="card-text" data-bind="text: desc"></p>
-          <a href="#" class="btn btn-dark" data-bind="click: $parent.processOrder">Accept</a>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <div class="form-group">
+            <label for="exampleInputPassword1">Quantity</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="How many bicycle's">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <div class="form-group">
+            <label for="exampleInputPassword1">Location To</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Delivery place">
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <br>
+    <br>
+    <h1>ORDER ACKNOWLEGMENT MANAGEMENT</h1>
+    <br>
+    <h2>New orders</h2>
+
+    <div class="row" data-bind="foreach: newOrders">
+      <div class="col-sm-2">
+        <div class="card bg-danger">
+          <div class="card-body">
+            <h4 class="card-title" data-bind="text: header"></h4>
+            <p class="card-text" data-bind="text: desc"></p>
+            <a href="#" class="btn btn-dark" data-bind="click: $parent.processOrder">Accept</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <h2>Orders in process</h2>
-
-  <div class="row" data-bind="foreach: ordersInProcess">
-    <div class="col-sm-2">
-      <div class="card bg-warning">
-        <div class="card-body">
-          <h4 class="card-title" data-bind="text: header"></h4>
-          <p class="card-text" data-bind="text: desc"></p>
-          <a href="#" class="btn btn-dark" data-bind="click: $parent.completeOrder">Process</a>
+    <br>
+    <br>
+    <h2>Orders in process</h2>
+    <div class="row" data-bind="foreach: ordersInProcess">
+      <div class="col-sm-2">
+        <div class="card bg-warning">
+          <div class="card-body">
+            <h4 class="card-title" data-bind="text: header"></h4>
+            <p class="card-text" data-bind="text: desc"></p>
+            <a href="#" class="btn btn-dark" data-bind="click: $parent.completeOrder">Process</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <h2>Completed orders</h2>
-
-  <div class="row" data-bind="foreach: completedOrders">
-    <div class="col-sm-2">
-      <div class="card bg-success">
-        <div class="card-body">
-          <h4 class="card-title" data-bind="text: header"></h4>
-          <p class="card-text" data-bind="text: desc"></p>
-          <a href="#" class="btn btn-dark" >Done</a>
+    <br>
+    <h2>Completed orders</h2>
+    <div class="row" data-bind="foreach: completedOrders">
+      <div class="col-sm-2">
+        <div class="card bg-success">
+          <div class="card-body">
+            <h4 class="card-title" data-bind="text: header"></h4>
+            <p class="card-text" data-bind="text: desc"></p>
+            <a href="#" class="btn btn-dark">Done</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="col-sm-2">
+    <!-- <div class="col-sm-2">
     <div class="card bg-dark">
       <div class="card-body">
-        <h4 class="card-title">USA</h4>
-        <p class="card-text">sorted orders.</p>
-        <a href="#" class="btn btn-primary">Done</a>
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div> -->
