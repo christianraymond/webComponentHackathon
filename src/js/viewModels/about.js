@@ -5,32 +5,50 @@
 /*
  * Your about ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/all-orders/loader'],
  function(oj, ko, $) {
 
     function AboutViewModel() {
       var self = this;
 
       self.newOrders = ko.observableArray([
-        {id : 123, header : "One", desc : "this is it!"},
-        {id : 765, header : "Three", desc : "this is another thing!"}
+        {id : 123, header : "One", desc : "Order from Canada!"},
+        {id : 765, header : "Two", desc : "Another order!"},
+        {id : 829, header : "Three", desc : "New order coming!"},
+        {id : 469, header : "Four", desc : "New order coming!"},
+        {id : 569, header : "Five", desc : "New order coming!"},
+        {id : 169, header : "Six", desc : "New order coming!"},
       ]);
 
-      self.ordersInProcess = ko.observableArray([
-        
-      ]);
+      self.ordersInProcess = ko.observableArray([]);
+
+      self.completedOrders = ko.observableArray([]);
 
       self.processOrder = function(order){
-        //alert(order.id);
 
         self.ordersInProcess.push(order);
 
         var orderList = self.newOrders().filter(function(o){
             return o.id !== order.id;
         });
+
         self.newOrders(orderList);
+      }
+
+      self.completeOrder = function(order){
+
+        self.completedOrders.push(order);
+
+        var processedOrders = self.ordersInProcess().filter(function(p){
+          return p.id !== order.id;
+        })
+
+        self.ordersInProcess(processedOrders)
 
       }
+
+
+
 
       // Below are a subset of the ViewModel methods invoked by the ojModule binding
       // Please reference the ojModule jsDoc for additional available methods.

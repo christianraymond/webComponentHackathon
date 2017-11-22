@@ -3,7 +3,7 @@
   The Universal Permissive License (UPL), Version 1.0
 */
 define(
-    ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'promise', 'ojs/ojlistview', 'ojs/ojarraydataprovider', 'ojs/ojbutton', 'ojs/ojinputtext'], function (oj, ko, $) {
+    ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'promise', 'ojs/ojlistview', 'ojs/ojbutton', 'ojs/ojinputtext'], function (oj, ko, $) {
     'use strict';
 
     function ExampleComponentModel(context) {
@@ -19,8 +19,6 @@ define(
             //Parse your component properties here
 
         });
-
-
     };
 
     //Lifecycle methods - uncomment and implement if necessary
