@@ -21,26 +21,25 @@
   <form>
     <div class="form-row">
       <div class="form-group col-md-2">
-        <label for="inputclient">Customer</label>
+        <label for="inputclient"><b>Customer Name</b></label>
         <input type="text" class="form-control" data-bind="value:client" id="client" placeholder="Client.." required="">
       </div><br>
 
       <div class="form-group col-md-2">
-        <label for="inputtype">Bicycle Type</label>
+        <label for="inputtype"><b>Bicycle Type</b></label>
         <input type="text" class="form-control" data-bind="value:type" id="type" placeholder="Type.." required="">
-      </div><br>
-
-      <div class="form-group col-md-2">
-        <label for="inputlocation">Location</label>
-        <input type="text" class="form-control" data-bind="value:location" id="location" placeholder="Location.." required="">
       </div>
 
+      <div class="form-group col-md-2">
+        <label for="inputlocation"><b>Location</b></label>
+        <input type="text" class="form-control" data-bind="value:location" id="location" placeholder="Location.." required="">
+      </div>
       <div class="form-group col-md-2"><br>
-        <label for="inputamount">Amount</label>
+        <label for="inputamount"><b>Amount</b></label>
         <input type="text" class="form-control" data-bind="value:amount" id="amount" placeholder="Amount.." required="">
       </div>
     </div>
-    <button type="submit" data-bind="click: addNewOrder" class="btn btn-primary">Submit</button>
+    <button type="submit" data-bind="click: addNewOrder" class="btn btn-primary">Submit Order</button>
   </form><br>
 
   <h2><b>New orders</b></h2>

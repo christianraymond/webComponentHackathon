@@ -25,11 +25,13 @@ define(
 
         ]);
         self.addNewOrder = function(){
+
+        //  setTimeout(self.newOrders({id : Math.random().toFixed(2)*100,
+        //  client : self.client(), type : self.type(),
+        //  location: self.location(), amount: self.amount()}, 100))
+
           self.newOrders.push({id : Math.random().toFixed(2)*100, client : self.client(), type : self.type(), location: self.location(), amount: self.amount()})
         }
-
-          
-
         self.ordersInProcess = ko.observableArray([]);
 
         self.completedOrders = ko.observableArray([]);

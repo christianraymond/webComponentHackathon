@@ -16,5 +16,23 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "private": true
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianraymond/webComponentHackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christianraymond/webComponentHackathon/issues"
+  },
+  "homepage": "https://github.com/christianraymond/webComponentHackathon#readme"
 }
