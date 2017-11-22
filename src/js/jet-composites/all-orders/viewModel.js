@@ -12,6 +12,11 @@ define(
         //Example observable
         self.messageText = ko.observable('ALL ORDERS');
 
+        self.client = ko.observable();
+        self.type = ko.observable();
+        self.location = ko.observable();
+        self.amount = ko.observable();
+
         context.props.then(function (propertyMap) {
             //Store a reference to the properties for any later use
             self.properties = propertyMap;
@@ -21,14 +26,14 @@ define(
         });
 
         self.newOrders = ko.observableArray([
-          {id : 123, header : "One", desc : "Order from Canada!"},
-          {id : 765, header : "Two", desc : "Another order!"},
-          {id : 829, header : "Three", desc : "New order coming!"},
-          {id : 469, header : "Four", desc : "New order coming!"},
-          {id : 569, header : "Five", desc : "New order coming!"},
-          {id : 169, header : "Six", desc : "New order coming!"},
+          // {client : "Sipha", type : "bicycle", location : "USA", amount: 39},
+          // {client : "Mbulelo", type : "bicycle", location : "USA", amount: 39},
+          // {client : "Chris", type : "bicycle", location : "USA", amount: 39},
         ]);
+        self.addNewOrder = function(){
 
+          self.newOrders.push({id : Math.random().toFixed(2)*100, client : self.client(), type : self.type(), location: self.location(), amount: self.amount()})
+        }
         self.ordersInProcess = ko.observableArray([]);
 
         self.completedOrders = ko.observableArray([]);
