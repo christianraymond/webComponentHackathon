@@ -17,7 +17,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
       ]);
 
       self.ordersInProcess = ko.observableArray([
-
+        
       ]);
 
       self.processOrder = function(order){
@@ -29,7 +29,7 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
             return o.id !== order.id;
         });
         self.newOrders(orderList);
-        
+
       }
 
       // Below are a subset of the ViewModel methods invoked by the ojModule binding

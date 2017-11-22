@@ -31,10 +31,10 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
       var navData = [
       {name: 'Dashboard', id: 'dashboard',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
-      // {name: 'Incidents', id: 'incidents',
-      //  iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
-      // {name: 'Customers', id: 'customers',
-      //  iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
+      {name: 'Incidents', id: 'incidents',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
+      {name: 'Customers', id: 'customers',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
       {name: 'About', id: 'about',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
       ];
@@ -57,9 +57,9 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
 
       // Header
       // Application Name used in Branding Area
-      self.appName = ko.observable("CodeX Dashboard");
+      self.appName = ko.observable("App Name");
       // User Info used in Global Navigation area
-      self.userLogin = ko.observable("user@codex.com");
+      self.userLogin = ko.observable("john.hancock@oracle.com");
 
       // Footer
       function footerLink(name, id, linkTarget) {
@@ -68,9 +68,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
         this.linkTarget = linkTarget;
       }
       self.footerLinks = ko.observableArray([
-        new footerLink('About Steltix', '', 'http://steltix.com'),
-        new footerLink('About CodeX', '', 'http://projectcodex.co'),
-        new footerLink('About JET', '', 'http://www.oracle.com/webfolder/technetwork/jet/globalGetStarted.html'),
+        new footerLink('About Oracle', 'aboutOracle', 'http://www.oracle.com/us/corporate/index.html#menu-about'),
+        new footerLink('Contact Us', 'contactUs', 'http://www.oracle.com/us/corporate/contact/index.html'),
+        new footerLink('Legal Notices', 'legalNotices', 'http://www.oracle.com/us/legal/index.html'),
+        new footerLink('Terms Of Use', 'termsOfUse', 'http://www.oracle.com/us/legal/terms/index.html'),
+        new footerLink('Your Privacy Rights', 'yourPrivacyRights', 'http://www.oracle.com/us/legal/privacy/index.html')
       ]);
      }
 

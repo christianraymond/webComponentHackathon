@@ -1,0 +1,24 @@
+<!--
+  Copyright (c) 2015, 2017, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<p data-bind="text:messageText"></p>
+
+<oj-list-view id="listview" aria-label="list using observable array"
+              data="[[dataProvider]]" selection-mode="multiple" selection="{{selectedItems}}" item.renderer="[[renderer]]">
+          </oj-list-view>
+          <!-- <div class='oj-flex-bar'>
+            <div class='oj-flex-bar-start'>
+              <label for="inputItem" class="oj-label-inline">Add item to the end:</label>
+            </div>
+            <div class='oj-flex-bar-middle'>
+              <oj-input-text id="inputItem" value="{{itemToAdd}}">
+              </oj-input-text>
+            </div>
+          </div>
+          <oj-button id="addButton" on-click="[[addItem]]">Add</oj-button>
+          <oj-button id="removeButton" on-click="[[removeSelected]]">Remove</oj-button>
+
+          <oj-list-view id="listview" aria-label="list using observable array"
+              data="[[dataProvider]]" selection-mode="multiple" selection="{{selectedItems}}" item.renderer="[[renderer]]">
+          </oj-list-view> -->

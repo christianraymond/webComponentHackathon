@@ -1,0 +1,7 @@
+show-allorders:not(.oj-complete){
+  visibility: hidden;
+}
+
+show-allorders{
+
+}
